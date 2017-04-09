@@ -17,7 +17,7 @@ BuildRequires:	libgpg-error-devel >= 1.17
 BuildRequires:	libksba-devel >= 1.2.0
 BuildRequires:	zlib-devel
 Requires:	libgcrypt >= 1.6.0
-Requires:	libgpg-devel >= 1.17
+Requires:	libgpg-error >= 1.17
 Requires:	libksba >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
