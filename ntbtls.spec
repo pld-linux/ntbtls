@@ -6,7 +6,7 @@ Summary:	Not Too Bad Transport Layer Security
 Summary(pl.UTF-8):	Not Too Bad Transport Layer Security - "nie taka zła" implementacja TLS
 Name:		ntbtls
 Version:	0.1.2
-Release:	1
+Release:	2
 License:	GPL v3+
 Group:		Libraries
 Source0:	ftp://ftp.gnupg.org/gcrypt/ntbtls/%{name}-%{version}.tar.bz2
