@@ -5,19 +5,19 @@
 Summary:	Not Too Bad Transport Layer Security
 Summary(pl.UTF-8):	Not Too Bad Transport Layer Security - "nie taka zła" implementacja TLS
 Name:		ntbtls
-Version:	0.1.2
-Release:	2
+Version:	0.2.0
+Release:	1
 License:	GPL v3+
 Group:		Libraries
 Source0:	ftp://ftp.gnupg.org/gcrypt/ntbtls/%{name}-%{version}.tar.bz2
-# Source0-md5:	81490fbbe551768019689071443f4e36
+# Source0-md5:	efe1b12502df319bf78707a2fa767098
 URL:		https://wiki.gnupg.org/NTBTLS
-BuildRequires:	libgcrypt-devel >= 1.6.0
-BuildRequires:	libgpg-error-devel >= 1.17
+BuildRequires:	libgcrypt-devel >= 1.8.0
+BuildRequires:	libgpg-error-devel >= 1.25
 BuildRequires:	libksba-devel >= 1.2.0
 BuildRequires:	zlib-devel
-Requires:	libgcrypt >= 1.6.0
-Requires:	libgpg-error >= 1.17
+Requires:	libgcrypt >= 1.8.0
+Requires:	libgpg-error >= 1.25
 Requires:	libksba >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -42,8 +42,8 @@ Summary:	Header files for NTBTLS library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki NTBTLS
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	libgcrypt-devel >= 1.6.0
-Requires:	libgpg-error-devel >= 1.17
+Requires:	libgcrypt-devel >= 1.8.0
+Requires:	libgpg-error-devel >= 1.25
 Requires:	libksba-devel >= 1.2.0
 Requires:	zlib-devel
 
@@ -79,6 +79,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# obsoleted by pkg-config
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libntbtls.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -95,8 +98,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/ntbtls-config
 %attr(755,root,root) %{_libdir}/libntbtls.so
-%{_libdir}/libntbtls.la
 %{_includedir}/ntbtls.h
+%{_pkgconfigdir}/ntbtls.pc
 %{_aclocaldir}/ntbtls.m4
 
 %if %{with static_libs}
