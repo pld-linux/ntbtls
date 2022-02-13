@@ -5,18 +5,18 @@
 Summary:	Not Too Bad Transport Layer Security
 Summary(pl.UTF-8):	Not Too Bad Transport Layer Security - "nie taka zła" implementacja TLS
 Name:		ntbtls
-Version:	0.2.0
+Version:	0.3.0
 Release:	1
 License:	GPL v3+
 Group:		Libraries
 Source0:	ftp://ftp.gnupg.org/gcrypt/ntbtls/%{name}-%{version}.tar.bz2
-# Source0-md5:	efe1b12502df319bf78707a2fa767098
+# Source0-md5:	31ec7569b2844eb8cc898f76bbd60485
 URL:		https://wiki.gnupg.org/NTBTLS
-BuildRequires:	libgcrypt-devel >= 1.8.0
+BuildRequires:	libgcrypt-devel >= 1.9.0
 BuildRequires:	libgpg-error-devel >= 1.25
 BuildRequires:	libksba-devel >= 1.2.0
 BuildRequires:	zlib-devel
-Requires:	libgcrypt >= 1.8.0
+Requires:	libgcrypt >= 1.9.0
 Requires:	libgpg-error >= 1.25
 Requires:	libksba >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -42,7 +42,7 @@ Summary:	Header files for NTBTLS library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki NTBTLS
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	libgcrypt-devel >= 1.8.0
+Requires:	libgcrypt-devel >= 1.9.0
 Requires:	libgpg-error-devel >= 1.25
 Requires:	libksba-devel >= 1.2.0
 Requires:	zlib-devel
