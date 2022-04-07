@@ -5,12 +5,12 @@
 Summary:	Not Too Bad Transport Layer Security
 Summary(pl.UTF-8):	Not Too Bad Transport Layer Security - "nie taka zła" implementacja TLS
 Name:		ntbtls
-Version:	0.3.0
+Version:	0.3.1
 Release:	1
 License:	GPL v3+
 Group:		Libraries
 Source0:	ftp://ftp.gnupg.org/gcrypt/ntbtls/%{name}-%{version}.tar.bz2
-# Source0-md5:	31ec7569b2844eb8cc898f76bbd60485
+# Source0-md5:	970dd056419b98594b3318e3dc552cb9
 URL:		https://wiki.gnupg.org/NTBTLS
 BuildRequires:	libgcrypt-devel >= 1.9.0
 BuildRequires:	libgpg-error-devel >= 1.25
