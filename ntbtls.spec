@@ -12,6 +12,7 @@ Group:		Libraries
 Source0:	ftp://ftp.gnupg.org/gcrypt/ntbtls/%{name}-%{version}.tar.bz2
 # Source0-md5:	970dd056419b98594b3318e3dc552cb9
 URL:		https://wiki.gnupg.org/NTBTLS
+BuildRequires:	automake
 BuildRequires:	libgcrypt-devel >= 1.9.0
 BuildRequires:	libgpg-error-devel >= 1.25
 BuildRequires:	libksba-devel >= 1.2.0
