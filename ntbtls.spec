@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	static_libs	# don't build static libraries
+%bcond_without	static_libs	# static library
 #
 Summary:	Not Too Bad Transport Layer Security
 Summary(pl.UTF-8):	Not Too Bad Transport Layer Security - "nie taka zła" implementacja TLS
@@ -14,11 +14,11 @@ Source0:	ftp://ftp.gnupg.org/gcrypt/ntbtls/%{name}-%{version}.tar.bz2
 URL:		https://wiki.gnupg.org/NTBTLS
 BuildRequires:	automake
 BuildRequires:	libgcrypt-devel >= 1.9.0
-BuildRequires:	libgpg-error-devel >= 1.25
+BuildRequires:	libgpg-error-devel >= 1.29
 BuildRequires:	libksba-devel >= 1.2.0
 BuildRequires:	zlib-devel
 Requires:	libgcrypt >= 1.9.0
-Requires:	libgpg-error >= 1.25
+Requires:	libgpg-error >= 1.29
 Requires:	libksba >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -44,7 +44,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki NTBTLS
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libgcrypt-devel >= 1.9.0
-Requires:	libgpg-error-devel >= 1.25
+Requires:	libgpg-error-devel >= 1.29
 Requires:	libksba-devel >= 1.2.0
 Requires:	zlib-devel
 
