@@ -9,7 +9,7 @@ Version:	0.3.2
 Release:	1
 License:	GPL v3+
 Group:		Libraries
-Source0:	ftp://ftp.gnupg.org/gcrypt/ntbtls/%{name}-%{version}.tar.bz2
+Source0:	https://www.gnupg.org/ftp/gcrypt/ntbtls/%{name}-%{version}.tar.bz2
 # Source0-md5:	af15ad45b5ce56a3d4fce0f4f6c102a7
 URL:		https://wiki.gnupg.org/NTBTLS
 BuildRequires:	automake
